@@ -64,7 +64,7 @@ const Box = () => {
   } else message = `${winner} wins!`;
   return (
     <div className="p-2 flex flex-col">
-      <div className="my-3 text-center text-lg font-semibold text-slate-200">
+      <div className="my-3 text-center text-lg font-semibold text-slate-900 dark:text-slate-200">
         {message}
       </div>
 

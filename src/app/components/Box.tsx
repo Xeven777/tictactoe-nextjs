@@ -45,6 +45,7 @@ const Box = () => {
     for (const [a, b, c] of wins) {
       if (boxes[a] && boxes[a] === boxes[b] && boxes[a] === boxes[c]) {
         return boxes[a];
+        
       }
     }
     return null;
@@ -72,7 +73,13 @@ const Box = () => {
           <button
             key={i}
             type="button"
-            className="w-20 h-20 shadow shadow-slate-500 bg-slate-300 text-slate-900 font-bold text-4xl rounded-md active:scale-95 hover:bg-slate-200 transition-all active:rotate-3"
+            className={`w-20 h-20 shadow shadow-slate-500 ${
+              box === "X"
+                ? "text-blue-500 bg-slate-100"
+                : box === "O"
+                ? "text-red-600 bg-slate-100"
+                : "bg-slate-300"
+            } font-bold text-4xl rounded-md active:scale-95 hover:bg-slate-200 transition-all active:rotate-3`}
             onClick={() => handleclick(i)}
             disabled={box !== "" || end}
           >
@@ -83,7 +90,7 @@ const Box = () => {
 
       <button
         type="button"
-        className="mt-8 mx-auto px-4 py-2 bg-slate-200 text-slate-700 font-semibold rounded-md active:scale-95 hover:bg-slate-400 transition-all"
+        className="mt-8 mx-auto px-4 py-2 bg-slate-200 text-slate-700 font-semibold rounded-md active:scale-95 hover:bg-slate-300 transition-all"
         onClick={resetGame}
       >
         Reset Game

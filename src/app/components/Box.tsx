@@ -7,10 +7,13 @@ const Box = () => {
   const [count, setCount] = useState(0);
   const [boxes, setBoxes] = useState(Array(9).fill(""));
   const [end, setEnd] = useState(false);
+  const [winner, setWinner] = useState("");
   let message;
   useEffect(() => {
     const winner = checkWinner();
+
     if (winner) {
+      setWinner(winner);
       alert(`${winner} wins!`);
       setEnd(true);
     }
@@ -21,6 +24,7 @@ const Box = () => {
     const newBoxes = boxes.slice();
     newBoxes[i] = turn;
     setCount(newCount);
+    console.log(count);
     if (count === 8) {
       setEnd(true);
       console.log(end);
@@ -57,9 +61,10 @@ const Box = () => {
   }
   if (count <= 8 && !end) {
     message = `${turn}'s turn`;
-  } else {
+  } else if (!winner) {
+    console.log("lol", end);
     message = "Game Over. Its a Draw";
-  }
+  } else message = `${winner} wins!`;
   return (
     <div className="p-2 flex flex-col">
       <div className="my-3 text-center text-lg font-semibold text-slate-200">

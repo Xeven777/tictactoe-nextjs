@@ -7,9 +7,9 @@ export default function Home() {
         Tic-Tac-Toe
       </h2>
       <Box />
-      <div className="fixed bottom-4 right-8 text-slate-200p">
-        Made with ❤️ by <a href="https://bento.me/anish7" className="text-blue-200">Anish</a>
-      </div>
+      <a href="https://bento.me/anish7" className="fixed bottom-4 right-8">
+        Made with ❤️ by <span className="font-semibold">Anish</span>
+      </a>
     </main>
   );
 }

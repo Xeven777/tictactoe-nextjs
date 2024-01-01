@@ -72,7 +72,7 @@ const Box = () => {
           <button
             key={i}
             type="button"
-            className="w-20 h-20 shadow shadow-slate-500 bg-slate-300 text-slate-900 font-bold text-4xl rounded-md active:scale-95 hover:bg-slate-200 transition-all"
+            className="w-20 h-20 shadow shadow-slate-500 bg-slate-300 text-slate-900 font-bold text-4xl rounded-md active:scale-95 hover:bg-slate-200 transition-all active:rotate-3"
             onClick={() => handleclick(i)}
             disabled={box !== "" || end}
           >

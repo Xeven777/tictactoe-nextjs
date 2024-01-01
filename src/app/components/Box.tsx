@@ -14,7 +14,7 @@ const Box = () => {
 
     if (winner) {
       setWinner(winner);
-      alert(`${winner} wins!`);
+      
       setEnd(true);
     }
   }, [boxes]);

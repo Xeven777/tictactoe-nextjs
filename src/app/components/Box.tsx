@@ -24,10 +24,8 @@ const Box = () => {
     const newBoxes = boxes.slice();
     newBoxes[i] = turn;
     setCount(newCount);
-    console.log(count);
     if (count === 8) {
       setEnd(true);
-      console.log(end);
     }
     setBoxes(newBoxes);
     setTurn(turn === "X" ? "O" : "X");
@@ -44,7 +42,6 @@ const Box = () => {
       [0, 4, 8],
       [2, 4, 6],
     ];
-    console.log(boxes);
     for (const [a, b, c] of wins) {
       if (boxes[a] && boxes[a] === boxes[b] && boxes[a] === boxes[c]) {
         return boxes[a];
@@ -62,7 +59,6 @@ const Box = () => {
   if (count <= 8 && !end) {
     message = `${turn}'s turn`;
   } else if (!winner) {
-    console.log("lol", end);
     message = "Game Over. Its a Draw";
   } else message = `${winner} wins!`;
   return (

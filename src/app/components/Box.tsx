@@ -57,11 +57,13 @@ const Box = () => {
     setBoxes(Array(9).fill(""));
     setTurn("X");
   }
-  if (count <= 8 && !end) {
-    message = `${turn}'s turn`;
+  if (count === 8 && !winner) {
+    message = "Game Over. It's a Draw";
   } else if (!winner) {
-    message = "Game Over. Its a Draw";
-  } else message = `${winner} wins! Hurrayy! 👏🏻🎉`;
+    message = `${turn}'s turn`;
+  } else {
+    message = `${winner} wins! Hurrayy! 👏🏻🎉`;
+  }
   return (
     <div className="p-2 flex flex-col">
       <div className="my-3 text-center text-lg font-semibold text-slate-900 dark:text-slate-200">

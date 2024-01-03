@@ -61,7 +61,7 @@ const Box = () => {
     message = `${turn}'s turn`;
   } else if (!winner) {
     message = "Game Over. Its a Draw";
-  } else message = `${winner} wins!`;
+  } else message = `${winner} wins! Hurrayy! 👏🏻🎉`;
   return (
     <div className="p-2 flex flex-col">
       <div className="my-3 text-center text-lg font-semibold text-slate-900 dark:text-slate-200">
@@ -75,7 +75,7 @@ const Box = () => {
             type="button"
             className={`w-20 h-20 shadow shadow-slate-500 ${
               box === "X"
-                ? "text-blue-500 bg-slate-100"
+                ? "text-blue-500 bg-zinc-100"
                 : box === "O"
                 ? "text-red-600 bg-slate-100"
                 : "bg-slate-300"

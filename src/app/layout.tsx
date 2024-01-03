@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Tic Tac Toe ❌⭕️",
   description: "a simple tic-tac-toe game Made using Next.js 14",
+  manifest: "/manifest.json",
   metadataBase: new URL("https://tic-tac-toe-next.netlify.app/"),
   openGraph: {
     title: "Tic Tac Toe ❌⭕️",

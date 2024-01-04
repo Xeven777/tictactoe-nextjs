@@ -52,6 +52,7 @@ const Box = () => {
   function resetGame() {
     setEnd(false);
     setCount(0);
+    setGWinner("");
     setBoxes(Array(9).fill(""));
     setTurn("X");
   }

@@ -7,14 +7,13 @@ const Box = () => {
   const [count, setCount] = useState(0);
   const [boxes, setBoxes] = useState(Array(9).fill(""));
   const [end, setEnd] = useState(false);
-  const [winner, setWinner] = useState("");
+  const [Gwinner, setGWinner] = useState("");
   let message;
   useEffect(() => {
     const winner = checkWinner();
 
     if (winner) {
-      setWinner(winner);
-      
+      setGWinner(winner);
       setEnd(true);
     }
   }, [boxes]);
@@ -45,7 +44,6 @@ const Box = () => {
     for (const [a, b, c] of wins) {
       if (boxes[a] && boxes[a] === boxes[b] && boxes[a] === boxes[c]) {
         return boxes[a];
-        
       }
     }
     return null;
@@ -57,12 +55,12 @@ const Box = () => {
     setBoxes(Array(9).fill(""));
     setTurn("X");
   }
-  if (count === 8 && !winner) {
-    message = "Game Over. It's a Draw";
-  } else if (!winner) {
+  if (count <= 8 && !end) {
     message = `${turn}'s turn`;
+  } else if (Gwinner === "") {
+    message = "Game Over. Its a Draw";
   } else {
-    message = `${winner} wins! Hurrayy! 👏🏻🎉`;
+    message = `${Gwinner} wins! Hurray !🎉👏🏻`;
   }
   return (
     <div className="p-2 flex flex-col">

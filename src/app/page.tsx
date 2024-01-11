@@ -1,8 +1,10 @@
 import Box from "./components/Box";
+import InstallBtn from "./components/InstallBtn";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center gap-4 p-2">
+      <InstallBtn />
       <h2 className="text-3xl md:text-4xl font-bold p-10 selection:text-zinc-900 selection:bg-slate-400">
         Tic-Tac-Toe
       </h2>

@@ -11,15 +11,15 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 16, 16, 12;
+    --background-end-rgb: 26, 27, 52;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
+      200deg,
       transparent,
       rgb(var(--background-end-rgb))
     )
